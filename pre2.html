@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>Prelab Exercises</title>
+</head>
+<body>
+<h3 ALIGN=Center>Prelab Exercises<br>
+     Sections 2.3 - 2.4</h3>
+<p>
+
+<ol>
+<li>What is the difference between a variable and a constant?
+<p>
+A variable is an identifier that refers to a memory location used to hold
+data values that can change as the program executes. A constant, on the
+other hand, is an identifier that holds a data value that cannot change.
+<p>
+<br>
+<li>Explain what each of the lines below does.  Be sure to indicate how
+each is different from the others.
+ <ol type="a">
+ <li> int x;
+ <p>
+Declares a variable named x that will hold an integer value (type int). 
+Memory is allocated for the variable but the value is undefined.
+<p>
+<br>
+ <li> int x = 3;
+ <p>
+Declares a variable named x that will hold a value of type int and stores
+the initial value of 3 in the variable.
+<p>
+<br>
+ <li> x = 3;
+<p>
+Stores the value of  3 in the variable x.
+ </ol>
+ <p>
+<br>
+<li> The following program reads three integers and prints the average.  Fill
+in the blanks so that it will work correctly.
+<pre>
+
+// *******************************************************************
+//   Average.java
+//
+//   Read three integers from the user and print their average
+// *******************************************************************
+
+import java.util.Scanner;
+
+public class Average
+{
+  public static void main(String[] args)
+  {
+    int val1, val2, val3;
+    double average;
+    Scanner scan = new Scanner(System.in);
+
+    // get three values from user
+    System.out.println("Please enter three integers and " +
+                       "I will compute their average");
+
+    <u>val1 = scan.nextInt();</u>
+
+    <u>val2 = scan.nextInt();</u>
+
+    <u>val3 = scan.nextInt();</u>
+
+    //compute the average
+
+    <u>average = (double)(val1 + val2 + val3)/3;</u>
+
+    //print the average
+
+    <u>System.out.println ("The average is " + average);</u>
+  }
+}
+</pre>
+<br>
+<br>
+<br>
+<li> Given the declarations below, find the result of each expression.
+<pre>
+int a = 3, b = 10, c = 7;
+double w = 12.9, y = 3.2;
+</pre>
+<ol type="a">
+<li>a + b * c = <b>73</b>
+<p>
+<li>a - b - c = <b>-14</b>
+<p>
+<li>a / b = <b>0</b>
+<p>
+<li>b / a = <b>3</b>
+<p>
+<li>a - b / c = <b>2</b>
+<p>
+<li>w / y = <b>4.03125</b>
+<p>
+<li>y / w = <b>0.248062...</b>
+<p>
+<li>a + w / b = <b>4.29</b>
+<p>
+<li>a % b / y = 3 / 3.2 = <b>0.9375</b>
+<p>
+<li>b % a = <b>1</b>
+<p>
+<li>w %  y = <b>0.1</b>
+</ol>
+<p>
+<li>Carefully study the following program
+and find and correct all of the syntax errors. 
+<pre>
+// File:     Errors.java
+// Purpose:  A program with lots of syntax errors
+//           Correct all of the errors (STUDY the program carefully!!)
+
+import java.util.Scanner;    // No # symbol in an import statement
+
+// Class name must match file name including case and the convention is
+// to capitalize class names.  Hence the class name should be Errors not
+// errors.
+public class Errors
+{
+   public static void main (String[] args)
+   {
+       String Name;  // Name of the user -- two slashes for a comment
+       int number;
+       int numSq;
+       Scanner scan = new Scanner(System.in);
+
+       System.out.print ("Enter your name, please: "); // missing semicolon
+       Name = scan.next();   // Name is a String not an int
+
+       System.out.print ("What is your favorite number? "); //Missing "
+       number = scan.nextInt();
+
+       numSq = number * number;
+
+       System.out.println (Name + ", the square of your number is " +
+                  numSq);    // Missing the concatenation operator +
+                             // and wrong variable name
+   } // Missing a closing brace
+}
+
+</pre> 
+
+<li>Trace the execution of the following program
+assuming
+the input stream contains the numbers 10, 3, and 14.3. Use a
+table that shows the value of each variable at each step.  Also
+show the output (exactly as it would be printed). 
+<pre>
+
+    // FILE:  Trace.java
+    // PURPOSE:  An exercise in tracing a program and understanding
+    //           assignment statements and expressions.
+
+    import java.util.Scanner;
+    
+    public class Trace
+    {
+       public static void main (String[] args)
+       {
+          int one, two, three;
+          double what;
+	  Scanner scan = new Scanner(System.in);
+
+          System.out.print ("Enter two integers: ");
+          one = scan.nextInt();
+          two = scan.nextInt();
+      
+          System.out.print("Enter a floating point number: ");
+          what = scan.nextDouble();
+
+          three = 4 * one + 5 * two;
+          two = 2 * one;
+          System.out.println ("one " + two + ":" + three);
+
+          one = 46 / 5 * 2 + 19 % 4;
+          three = one + two;
+          what = (what + 2.5) / 2;
+          System.out.println (what + " is what!");
+       }
+    }
+
+</pre>
+<p>
+<pre>
+         Output                                 Variables
+                                         one    two   three    what
+      ---------------------------------------------------------------
+      Enter two integers:	         10      3
+      Enter a floating point number:                           14.3
+                                                        55
+                                                20
+      one 20:55
+
+                                         21
+                                                        41
+                                                               8.4
+      8.4 is what!
+</pre>
+
+</ol>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Lab Grade Trace</title>
+</head>
+<body>
+<h2 ALIGN=Center>Lab Grade Trace</h2>
+<p>
+<b>Answers to  Question 1:</b>
+<p>
+The values  of the variables after being read in are:
+<pre>
+    preLabPts = 17        preLabMax = 20      labPts = 23    labMax = 25
+    postLabPts = 12       postLabMax = 15
+</pre>
+<ol type=a>
+<li>Execution of
+<pre>
+outClassAvg = preLabPts + postLabPts / preLabMax + postLabMax * 100;
+
+</pre>
+Multiplication and division have highest precedence and are evaluated
+left to right so the division is the first operation performed.  The
+variables postLabPts and preLabMax are both integers so integer division
+would be used. Hence the first calculation is
+<pre>
+           12 / 20  which equals 0
+</pre>
+The next operation is the multiplication:  postLabMax * 100 = 1500
+<p>
+Finally, the two additions are performed left to right:
+<pre>
+          17 + 0 + 1500 = 1517
+</pre>
+<li>Execution of 
+<pre>
+      inClassAvg = labPts / labMax * 100;
+</pre>
+Division and multiplication have the same precedence so evaluation is
+left to  right.  All operands are integers so integer division is used.
+Hence the evaluation is as follows:
+<pre>
+      inClassAvg = (23 / 25) * 100 = 0 * 100 = 0
+</pre>
+<li>Execution of
+<pre>
+      labGrade = OUT_WEIGHT * outClassAvg + IN_WEIGHT * inClassAvg;
+</pre>
+is as follows:
+<pre> 
+      labGrade = (0.4 * 1517) + (0.6 * 0) = 606 + 0 = 606.8
+</pre>
+</ol>
+<b>Question 3: </b><a href="LabGrade.java">Corrected Program</a>
+
+</body>
+</html>
+ 

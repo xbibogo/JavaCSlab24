@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Two Meanings of Plus Solution</title>
+</head>
+<body>
+<h2 align=center>Solution to <i>Two Meanings of Plus</i></h2>
+<p>
+<b>Question 1, part (c)</b>
+<p>
+The <b>first</b> print statement:  System.out.println ("8 plus 5 is " + 8 + 5);
+prints
+<pre>
+        8 plus 5 is 85
+</pre>
+Because: There are no parentheses so evaluation is from left to 
+right. The first plus has a string operand on the left so the
+operation is concatenation - the 8 is concatenated with the string
+and the result is a string.  Now the second plus has a string
+on the left so it too is evaluated as concatenation - the 5
+is concatenated with the string "8 plus 5 is 8"
+<p>
+The <b>second</b> print statement: 
+	System.out.println ("8 plus 5 is " + (8 + 5));
+
+prints
+<pre>
+        8 plus 5 is 13
+</pre>
+Because:  The expression 8 + 5 in parentheses is evaluated first
+and both operands are numeric so the numbers are added to get 13.
+Then the other + is concatenation since the operand on the left
+is a string - the 13 is concatenated with that string.
+<p>
+The <b>third</b> print statement: 
+	System.out.println (8 + 5 + " equals 8 plus 5.");
+
+prints
+<pre>
+        13 equals 8 plus 5.
+</pre>
+Because: The expression is evaluated left to right since there
+are no parentheses.  The leftmost + has two numeric operands so
+they are added to get 13. Then the second + has one string
+operand so the 13 and that string are concatenated.
+<p>
+<b>Question 1, part (d):</b>  A space should be put inside the quotation marks
+after the word about and another one before the word years.
+Click <a href="PlusTest.java">here</a> for a corrected version of 
+the program.
+<p>
+<b>Question 2: </b>An example program is in <a href="Birds.java">Birds.java</a>
+
+
+</body>
+</html>
